@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { Route, Routes, Navigate } from 'react-router-dom';
 import styles from "./Home.module.css";
 import { ConstructorType } from '../../types/constructor';
+import { WorkDocumentType } from "../../types/workDocument";
 import { getConstructors } from "../../api/constructors";
 import { getWorkDocuments } from '../../api/documents';
 import Form from './components/Form/index';
-import { WorkDocumentType } from "../../types/workDocument";
+import Table from "./components/Table";
 
 
 export default function Home() {
@@ -12,7 +14,7 @@ export default function Home() {
   const [workDocuments, setWorkDocuments] = useState<WorkDocumentType[]>([]);
 
   useEffect(() => {
-    ( async () => {
+    (async () => {
       const costructorsRes = await getConstructors()
       if (costructorsRes.ok) {
         const constructorsData = await costructorsRes.json()
@@ -29,10 +31,20 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Form
-        constructors={constructors}
-        workDocuments={workDocuments}
-      />
+      <Routes>
+        <Route path='/' element={<Navigate to="form" replace={true} />}/>
+        <Route path='form' element={
+          <Form
+            constructors={constructors}
+            workDocuments={workDocuments}
+          />
+        } />
+        <Route path='table' element={
+          <Table
+            workDocuments={workDocuments}
+          />
+        } />
+      </Routes>
     </div>
   )
 }
