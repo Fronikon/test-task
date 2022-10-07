@@ -1,0 +1,26 @@
+.wrapper {
+  flex-direction: column;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 0.3em;
+
+  font-weight: 500;
+}
+
+.select {
+  display: block;
+  width: 100%;
+  padding: 0.3em;
+  border: 2px solid gray;
+  
+  font-size: inherit;
+  
+  outline: none;
+  border-radius: 0.3em;
+}
+
+.select:focus {
+  border: 2px solid black;
+}

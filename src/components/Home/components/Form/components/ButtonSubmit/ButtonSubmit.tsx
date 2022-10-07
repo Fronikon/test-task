@@ -1,4 +1,5 @@
 import { memo } from "react";
+import styles from "./ButtonSubmit.module.css";
 
 interface PropsType {
   isValid: boolean
@@ -6,7 +7,7 @@ interface PropsType {
 
 export const ButtonSubmit: React.FC<PropsType> = memo(({ isValid }) => {
   return (
-    <input type="submit" disabled={!isValid} />
+    <input className={styles.button} type="submit" disabled={!isValid} />
   )
 })
 

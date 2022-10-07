@@ -39,11 +39,9 @@ export default function Home() {
             workDocuments={workDocuments}
           />
         } />
-        <Route path='table' element={
-          <Table
-            workDocuments={workDocuments}
-          />
-        } />
+        <Route
+          path='table'
+          element={<Table workDocuments={workDocuments} />} />
       </Routes>
     </div>
   )

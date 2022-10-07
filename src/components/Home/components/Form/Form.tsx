@@ -1,11 +1,11 @@
 import { FormEvent, useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import { ConstructorType } from './../../../../types/constructor';
+import { WorkDocumentType } from "../../../../types/workDocument";
+import { createWorkDocument, updateWorkDocument } from "../../../../api/documents";
 import InputName from './components/InputName/index';
 import Select from './components/Select/index';
 import ButtonSubmit from './components/ButtonSubmit/index';
-import { WorkDocumentType } from "../../../../types/workDocument";
-import { createWorkDocument, updateWorkDocument } from "../../../../api/documents";
 
 interface PropsType {
   constructors: ConstructorType[];

@@ -1,4 +1,5 @@
 import { ChangeEvent, memo } from "react";
+import styles from "./InputName.module.css";
 
 interface PropsType {
   value: string;
@@ -11,7 +12,21 @@ export const InputName: React.FC<PropsType> = memo(({ value, setValue }) => {
   }
 
   return (
-    <input onChange={onChange} value={value} type="text" />
+    <div>
+      <label
+        className={styles.label}
+        htmlFor="inputName">
+      Название документа:
+      </label>
+      <input
+        id="inputName"
+        className={styles.input}
+        onChange={onChange}
+        value={value}
+        placeholder='Введите текст'
+        type="text"
+      />
+    </div>
   )
 })
 
