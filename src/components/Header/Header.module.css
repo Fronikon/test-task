@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  height: 3em;
+
+  background-color: #212123;
+}
+
+.container {
+  flex: 1;
+  max-width: 1400px;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.link {
+  font-size: 1.3em;
+  line-height: 1em;
+  color: white;
+
+  transition: color 200ms, opacity 200ms;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.active {
+  color: rgb(211, 45, 45);
+}
