@@ -1,6 +1,10 @@
+import Home from './components/Home/index';
+
 const App = () => {
   return (
-    <div className="App">App</div>
+    <div className="App">
+      <Home />
+    </div>
   );
 }
 

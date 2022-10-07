@@ -1,22 +1,43 @@
 {
-  "users": [
+  "constructors": [
     {
-      "email": "Sidorov@mail.com",
-      "password": "$2a$10$GM8aOri08O0.yiVezpt3veWfS2k47mYhd.REzG2i5noSyQEneZuvy",
       "name": "Сидоров С. С.",
       "id": 1
     },
     {
-      "email": "Petrov@mail.com",
-      "password": "$2a$10$.pWoKiqa.x7MAzK/qqS6teqdaQceowUf5T4kIl8i7.SlJ9dIzbLfK",
       "name": "Петров П. П.",
       "id": 2
     },
     {
-      "email": "Ivanov@mail.com",
-      "password": "$2a$10$MvFOAwGR9m7kpHY6Ly1Lv.aQKyeuzNjqMHv/UEdkF/2ChMIJWAJQ2",
       "name": "Иванов И. И.",
       "id": 3
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "name": "ГОСТ 123",
+      "constructors": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ГОСТ Р 125",
+      "constructors": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ГОСТ РВ 0009",
+      "constructors": [
+        1,
+        2,
+        3
+      ]
     }
   ]
 }

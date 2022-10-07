@@ -1,0 +1,11 @@
+.container {
+  width: 20em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
