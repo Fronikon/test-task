@@ -26,8 +26,7 @@
       "id": 2,
       "name": "ГОСТ Р 125",
       "constructors": [
-        2,
-        3
+        1
       ]
     },
     {
@@ -35,7 +34,51 @@
       "name": "ГОСТ РВ 0009",
       "constructors": [
         1,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ГОСТ DT 0032",
+      "constructors": [
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "name": "ГОСТ 345",
+      "constructors": [
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ГОСТ TR 1203",
+      "constructors": [
         2,
+        1,
+        3
+      ]
+    },
+    {
+      "id": 7,
+      "name": "ГОСТ TD 767",
+      "constructors": [
+        3
+      ]
+    },
+    {
+      "id": 8,
+      "name": "ГОСТ SR 3478",
+      "constructors": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "name": "ГОСТ 12",
+      "constructors": [
         3
       ]
     }
