@@ -34,3 +34,11 @@ export const createWorkDocument = async (body: BodyType): Promise<Response> => {
     },
   })
 }
+
+export const setWorkDocumentsFromApi = async (setWorkDocuments: React.Dispatch<React.SetStateAction<WorkDocumentType[]>>) => {
+  const workDocumentsRes = await getWorkDocuments()
+  if (workDocumentsRes.ok) {
+    const documentsData = await workDocumentsRes.json()
+    setWorkDocuments([...documentsData])
+  }
+}
