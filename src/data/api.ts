@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://test-task-json-server.herokuapp.com'
+export const BASE_URL = 'https://test-task-json-server.herokuapp.com';

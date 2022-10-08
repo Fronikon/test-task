@@ -32,4 +32,4 @@ export const Table: React.FC<PropsType> = ({ workDocuments }) => {
   )
 }
 
-export default Table
+export default Table;

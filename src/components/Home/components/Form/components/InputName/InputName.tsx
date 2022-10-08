@@ -8,14 +8,15 @@ interface PropsType {
 
 export const InputName: React.FC<PropsType> = memo(({ value, setValue }) => {
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value)
+    setValue(e.target.value);
   }
 
   return (
     <div>
       <label
         className={styles.label}
-        htmlFor="inputName">
+        htmlFor="inputName"
+      >
       Название документа:
       </label>
       <input
@@ -30,4 +31,4 @@ export const InputName: React.FC<PropsType> = memo(({ value, setValue }) => {
   )
 })
 
-export default InputName
+export default InputName;

@@ -12,4 +12,4 @@ export const ButtonSubmit: React.FC<PropsType> = memo(({ isValid, isSubmitting }
   )
 })
 
-export default ButtonSubmit
+export default ButtonSubmit;

@@ -8,11 +8,9 @@ interface PropsType {
   setValue: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
-export const Select: React.FC<PropsType> = memo(({
-  constructors, value, setValue
-}) => {
-  const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setValue(Number(e.target.value))
+export const Select: React.FC<PropsType> = memo(({ constructors, value, setValue }) => {
+  const onChange = (e: ChangeEvent<HTMLSelectElement>): void => {
+    setValue(Number(e.target.value));
   }
 
   return (
@@ -27,4 +25,4 @@ export const Select: React.FC<PropsType> = memo(({
   )
 })
 
-export default Select
+export default Select;

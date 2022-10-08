@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/index';
 import Header from './components/Header/index';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Header />

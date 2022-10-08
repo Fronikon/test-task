@@ -21,53 +21,51 @@ export const Form: React.FC<PropsType> = ({constructors, workDocuments, setWorkD
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   useEffect(() => {
-    if(constructors[0]) {
-      setSelectValue(constructors[0].id)
+    if (constructors[0]) {
+      setSelectValue(constructors[0].id);
     }
-  }, [constructors])
+  }, [constructors]);
 
   useEffect(() => {
-    setIsValid(!isError)
-  }, [isError])
+    setIsValid(!isError);
+  }, [isError]);
 
   useEffect(() => {
-    setIsValid(inputNameValue.length > 0)
-  }, [inputNameValue])
+    setIsValid(inputNameValue.length > 0);
+  }, [inputNameValue]);
 
   useEffect(() => {
     if (isError) {
-      setIsError(false)
+      setIsError(false);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inputNameValue, selectValue])
+  }, [inputNameValue, selectValue]);
 
   const onSubmit = async (e: FormEvent): Promise<void> => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (selectValue !== null) {
-      const workDocument = workDocuments.find((workDocument) => {
-        return workDocument.name === inputNameValue
-      })
+      const workDocument = workDocuments.find(({name}) => name === inputNameValue);
 
       if (workDocument) {
         if (workDocument.constructors.includes(selectValue)) {
-          setIsError(true)
+          setIsError(true);
         } else {
-          setIsSubmitting(true)
-          await updateWorkDocument({...workDocument, constructors: [...workDocument.constructors, selectValue]})
-          setInputNameValue('')
-          setWorkDocumentsFromApi(setWorkDocuments)
-          setIsSubmitting(false)
+          setIsSubmitting(true);
+          await updateWorkDocument({...workDocument, constructors: [...workDocument.constructors, selectValue]});
+          setInputNameValue('');
+          setWorkDocumentsFromApi(setWorkDocuments);
+          setIsSubmitting(false);
         }
       } else {
-        setIsSubmitting(true)
+        setIsSubmitting(true);
         await createWorkDocument({
           name: inputNameValue,
           constructors: [selectValue]
         })
-        setInputNameValue('')
-        setWorkDocumentsFromApi(setWorkDocuments)
-        setIsSubmitting(false)
+        setInputNameValue('');
+        setWorkDocumentsFromApi(setWorkDocuments);
+        setIsSubmitting(false);
       }
     }
   }
@@ -94,4 +92,4 @@ export const Form: React.FC<PropsType> = ({constructors, workDocuments, setWorkD
   )
 }
 
-export default Form
+export default Form;
